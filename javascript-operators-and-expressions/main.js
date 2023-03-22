@@ -27,5 +27,6 @@ const headCount = 9;
 const isSparta = headCount === 300;
 console.log(isSparta, typeof isSparta);
 
-const motto = 'Anna' + ' is the GOAT!';
+let motto = fullName;
+motto += ' is the GOAT';
 console.log(motto, typeof motto);
