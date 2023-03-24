@@ -13,7 +13,7 @@ Start with a defined variable name for the object, curly brace with properties i
 - How do you remove a property from an object?
 delete objectName.propertyName. Using keyword `delete` and the dot notation.
 - What are the two ways to get or update the value of a property?
-By adding a new key to the object with dot notation and assigning the value to that.
+By adding a new key to the object with dot notation and assigning the value to that. Or with bracket notation.
 ## Notes
 
 All student notes should be written here.
