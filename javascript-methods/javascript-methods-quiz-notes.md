@@ -17,21 +17,21 @@ With `Math.floor()`.
 - How do you generate a random number?
 With `Math.random()`.
 - How do you delete an element from an array?
-you would write keyword `delete` and then array name followed by the index of the element in brackets.
+you would write keyword `delete` and then array name followed by the index of the element in brackets. `splice()` would be a second way.
 - How do you append an element to an array?
-With `push()`.
+With `push()`, `unshift()`, and lastly with a `splice()` in the third argument.
 - How do you break a string up into an array?
-By using `split()` method and passing a space character `(' ')` as an argument.
+By using `split()` method and passing a space character `(' ')`  or a empty string `('')` as an argument.
 - Do string methods change the original string? How would you check if you weren't sure?
 No they do not change the original string. One can check with console.log.
 - Roughly how many string methods are there according to the MDN Web docs?
-~17.
+~50.
 - Is the return value of a function or method useful in every situation?
-No because sometimes it needs to be done once at the end.
+No because sometimes it needs to be done once at the end. So it depends on what you're trying to do.
 - Roughly how many array methods are there according to the MDN Web docs?
 ~39.
 - What three-letter acronym should you always include in your Google search about a JavaScript method or CSS property?
-MDN?
+MDN.
 ## Notes
 
 All student notes should be written here.
