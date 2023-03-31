@@ -21,7 +21,7 @@ With the Logical OR (||) operator, or the Logical AND (||) operator.
 - What is the purpose of a `switch` statement?
 To evaluate expressions, matching the same value as the result of the input expressions.
 - Is a `default` clause required in order to use a `switch` statement?
-Yes because in case of no matching case clause the program would escape with the default.
+No but it is best practice to add a default because in case of no matching case clause the program would escape with the default.
 ## Notes
 
 All student notes should be written here.
