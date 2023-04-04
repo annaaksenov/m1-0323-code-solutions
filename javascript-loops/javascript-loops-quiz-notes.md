@@ -13,13 +13,13 @@ Iteration, also called the final expression will add to the vartiable if the con
 - _When_ does the **condition** expression of a `while` loop get evaluated?
 As the only expression it is 1st to be evaluated and will execute so long the specified condition is true.
 - _When_ does the **initialization** expression of a `for` loop get evaluated?
-Onece before the code block is run.
+Once before the code block is run and again until the code runs falsey.
 - _When_ does the **condition** expression of a `for` loop get evaluated?
-It's 2nd expression to be evaluated when the code is executed and it checks if the conditon is true.
+It's 2nd expression to be evaluated when the code is executed and it checks if the conditon is true. Before each loop iteration.
 - _When_ does the **final** expression of a `for` loop get evaluated?
-After the code block has been executed.
+After the code block finishes executing.
 - Besides a `return` statement, which exits its entire function block, which keyword exits a loop before its **condition** expression evaluates to `false`?
-With a break statement. `break;`
+With a break statement. `break`
 - What does the `++` increment operator do?
 Adds one to variable.
 - How do you iterate through the keys of an object?
