@@ -8,7 +8,6 @@ function swapChars(firstIndex, secondIndex, string) {
     } else if (i === secondIndex) {
       a.push(string[firstIndex]);
     } else {
-      console.log(a);
       a.push(string[i]);
     }
   } for (let i = 0; i < a.length; i++) {
@@ -41,8 +40,5 @@ function swapChars(firstIndex, secondIndex, string) {
     }
   }
   console.log(str);
-  return str; */
-
-/**
-  *
-*/
+  return str;
+**/
