@@ -6,6 +6,5 @@ function compact(array) {
       ar.push(array[i]);
     }
   }
-  console.log(ar);
   return ar;
 }
