@@ -15,30 +15,3 @@ function swapChars(firstIndex, secondIndex, string) {
   }
   return s;
 }
-
-/** attempt 1:
- * let str = '';
-  for (let i = 0; i <= string.length; i++) {
-    if (string[i] === firstIndex) {
-      str += string[i].replace(secondIndex, firstIndex);
-    } else if (string[i] === secondIndex) {
-      str += string[i].replace(firstIndex, secondIndex);
-    }
-  }
-  console.log(str);
-  return str; */
-
-/** attempt 2:
- * let str = '';
-  for (let i = 0; i <= string.length; i++) {
-    if (i === firstIndex) {
-      str += string[firstIndex];
-      str.replace(firstIndex, secondIndex);
-    } else if (i === secondIndex) {
-      str += string[secondIndex];
-      str.replace(secondIndex, firstIndex);
-    }
-  }
-  console.log(str);
-  return str;
-**/

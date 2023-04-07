@@ -8,6 +8,5 @@ function lastChars(length, string) {
       return 'LearningFuze';
     }
   }
-  console.log(str);
   return str;
 }
