@@ -9,7 +9,7 @@ doctype decleration, html, head, title, and body.
 - What is the purpose of HTML attributes?
 To contain extra info about the element like an id or class to identify or style.
 - Give an example of an HTML entity (escape character).
-img.
+`&reg;`
 ## Notes
 
 All student notes should be written here.
