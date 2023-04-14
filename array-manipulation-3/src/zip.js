@@ -1,6 +1,6 @@
 /* exported zip */
 function zip(first, second) {
-  const z = Array(Math.max(second.length, first.length)).fill().map((_, i) => [first[i], second[i]]);
+  const z = [...Array(Math.max(second.length, first.length))].map((_, i) => [first[i], second[i]]);
 
   console.log(z);
   return z;
