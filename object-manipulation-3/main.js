@@ -228,19 +228,15 @@ const deck = [
   }
 ];
 const shuff = _.shuffle(deck);
-// const deal = _.chunk(shuff, [2]);
-for (let i = 0; i < players.length; i++) {
-  const hands = players[i].hand;
-  hands.push(shuff);
-  console.log(hands);
-}
+const deal = _.chunk(shuff, [2]);
+console.log(shuff, deal, players);
 
-/** players.push(deal)[1];
-console.log(players);
-*/
+//   function game(players, hand) {
+//  const shuff = _.shuffle(deck);
+//  const deal = _.chunk(shuff, [2]);
 
-/**
- * shuffle the deck. w/ _.shuffle();
- * deal 2 cards to each player. how idk. w/ _.chunk().
- *  push? the deck into 'hand' arrays... for...in loop?
- */
+//  players.push(deal)[1];
+//  console.log(players);
+//  shuffle the deck. w/ _.shuffle();
+//  deal 2 cards to each player. how idk. w/ _.chunk().
+// push? the deck into 'hand' arrays... for...in loop?
