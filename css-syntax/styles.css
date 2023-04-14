@@ -1,0 +1,14 @@
+body {
+  color: #090302;
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+article {
+  padding: 16px;
+  border: 1px solid;
+  margin-bottom: 16px;
+}
