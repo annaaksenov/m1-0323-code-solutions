@@ -1,20 +1,20 @@
 /* exported titleCase */
 function titleCase(string) {
-  const title = [];
-  const subtitle = [];
-  for (let i = 0; i < string.length; i++) {
-    if (string[i] !== ':') {
-      title.push(string[i]);
-    } else {
-      subtitle.push();
+  const minor = ['and', 'or', 'nor', 'but', 'a', 'an', 'and', 'the', 'as', 'at', 'for', 'by', 'in', 'of', 'on', 'per', 'to'];
+  const str = string.toLowerCase().split(' ');
+  for (let i = 0; i < str.length; i++) {
+    if (i > 0 && minor.includes(str[i])) {
+      str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
     }
   }
+  console.log(str);
+  return str.join(' ');
 }
 
 /**
- * function titleCase(string) {
-  return string.toLowerCase().split(' ').map(function (word) {
-    return (word.charAt(0).toUpperCase() + word.slice(1));
-  }).join(' ');
-}
-*/
+ * return string.toLowerCase().replace(/\b\w/g, s => s.toUpperCase());
+ */
+
+/**
+ * string[i] = string[i].charAt(0).toUpperCase() + string[i].slice(1);
+ */
