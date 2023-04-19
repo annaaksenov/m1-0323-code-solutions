@@ -1,0 +1,20 @@
+h2,
+div {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+input,
+select {
+  width: 300px;
+  height: 35px;
+  border-radius: 5px;
+  border-color: lightgray;
+}
+
+button {
+  height: 30px;
+  border-radius: 5px;
+  border-color: lightgray;
+}
