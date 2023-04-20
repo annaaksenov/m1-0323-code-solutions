@@ -1,20 +1,59 @@
-h2,
-div {
+body {
+  display: block;
+  margin: 8px;
+}
+
+h2 {
+  font-size: 30px;
   display: flex;
   justify-content: center;
-  padding: 10px;
+  text-align: center;
+  color: orangered;
+}
+
+label {
+  display: block;
+  font-size: 10px;
+}
+
+form {
+  width: 350px;
+  margin: auto;
+  padding: 3px;
+}
+
+div {
+  display: block;
+  padding: 3px;
 }
 
 input,
 select {
-  width: 300px;
+  width: 350px;
   height: 35px;
   border-radius: 5px;
   border-color: lightgray;
+  justify-content: center;
 }
 
-button {
+/** margin-top: 5px;
+  margin-left: 18em;
   height: 30px;
   border-radius: 5px;
-  border-color: lightgray;
+  */
+
+/** h2 {
+  display: flex;
+  justify-content: center;
 }
+
+div {
+  text-align: center;
+  height: auto;
+  padding: 10px;
+}
+
+label {
+  display: flex;
+}
+*/
