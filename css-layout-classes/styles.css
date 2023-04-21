@@ -1,0 +1,42 @@
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lightgray;
+}
+
+h1,
+h2,
+p {
+  font-family: monospace;
+}
+
+.row {
+  display: flex;
+}
+
+.col-one-third {
+  flex-basis: calc(100% / 3);
+  justify-content: center;
+}
+
+.col-one-third > img {
+  width: 100%;
+}
+
+.col-one-fourth {
+  flex-basis: calc(100% / 4);
+  justify-content: center;
+}
+
+.col-one-fourth > img {
+  width: 100px;
+}
+
+.col-two-third {
+  width: 60%;
+}
+
+.col-two-third > img {
+  width: 60%;
+}
