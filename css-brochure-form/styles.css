@@ -4,6 +4,7 @@ body {
 }
 
 h2 {
+  font-family: "Brandon Grotesque", sans-serif;
   font-size: 30px;
   display: flex;
   justify-content: center;
@@ -34,6 +35,18 @@ select {
   border-radius: 5px;
   border-color: lightgray;
   justify-content: center;
+}
+
+.sub {
+  margin-left: 292px;
+}
+
+.submit {
+  border-radius: 5px;
+  width: auto;
+  background-color: orangered;
+  color: white;
+  border-color: orangered;
 }
 
 /** margin-top: 5px;
