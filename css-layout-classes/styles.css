@@ -2,7 +2,6 @@
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  background-color: lightgray;
 }
 
 h1,
@@ -26,17 +25,17 @@ p {
 
 .col-one-fourth {
   flex-basis: calc(100% / 4);
-  justify-content: center;
 }
 
 .col-one-fourth > img {
-  width: 100px;
+  width: 100%;
 }
 
-.col-two-third {
-  width: 60%;
+.col-text {
+  flex-basis: 80%;
+  justify-content: center;
 }
 
-.col-two-third > img {
-  width: 60%;
+.col-pic > img {
+  width: 100%;
 }
