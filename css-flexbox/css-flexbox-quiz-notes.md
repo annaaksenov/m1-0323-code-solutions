@@ -11,7 +11,7 @@ To fit all on one line, row. If need be wrap to the next line.
 - What axis do the `justify-content` properties work on?
 x-axis.
 - What axis do the `align-items` properties work on?
-cross axis. (column)
+cross axis (perp to the axis)
 
 ## Notes
 
