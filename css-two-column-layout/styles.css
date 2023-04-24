@@ -3,11 +3,13 @@
   min-height: 70vh;
   margin-left: auto;
   margin-right: auto;
-  background-color: aquamarine;
 }
 
 .row {
   display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
 }
 
 .col-full {
@@ -44,5 +46,20 @@ p {
 
 .text {
   margin-left: 80px;
-  margin-right: 100px;
+
+  /* margin-right: 100px; */
+}
+
+.foot {
+  margin: auto;
+  padding-top: 10px;
+}
+
+.lm {
+  background-color: white;
+  border-color: rgb(255 60 0);
+  color: rgb(255 60 0);
+  height: 35px;
+  width: 150px;
+  font-family: monospace;
 }
