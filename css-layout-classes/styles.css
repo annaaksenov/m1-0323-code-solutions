@@ -1,0 +1,41 @@
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1,
+h2,
+p {
+  font-family: monospace;
+}
+
+.row {
+  display: flex;
+}
+
+.col-one-third {
+  flex-basis: calc(100% / 3);
+  justify-content: center;
+}
+
+.col-one-third > img {
+  width: 100%;
+}
+
+.col-one-fourth {
+  flex-basis: calc(100% / 4);
+}
+
+.col-one-fourth > img {
+  width: 100%;
+}
+
+.col-text {
+  flex-basis: 80%;
+  justify-content: center;
+}
+
+.col-pic > img {
+  width: 100%;
+}
