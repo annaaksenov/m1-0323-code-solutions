@@ -1,6 +1,7 @@
 /* exported titleCase */
 function titleCase(string) {
   const exceptions = ['a', 'an', 'the', 'as', 'at', 'by', 'for', 'in', 'of', 'on', 'per', 'to', 'and'];
+
   const words = string.toLowerCase().split(/\s+/);
 
   const capitalizedWords = words.map((word, index) => {
@@ -11,20 +12,12 @@ function titleCase(string) {
       } else if (word === 'javascript') {
         // Word is "javascript", capitalize it as "JavaScript"
         return 'JavaScript';
-      } else if (word === 'api') {
-        return 'API';
       } else {
         // Capitalize the first letter of the word
         let capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1);
 
-        // Capitalize the first letter after a hyphen or a colon
-        if (capitalizedWord.includes('-')) {
-          const hyphenIndex = capitalizedWord.indexOf('-');
-          capitalizedWord = capitalizedWord.slice(0, hyphenIndex + 1) + capitalizedWord.charAt(hyphenIndex + 1).toUpperCase() + capitalizedWord.slice(hyphenIndex + 2);
-        } else if (capitalizedWord.includes(':')) {
-          const colonIndex = capitalizedWord.indexOf(':');
-          capitalizedWord = capitalizedWord.slice(0, colonIndex + 1) + capitalizedWord.charAt(colonIndex + 1).toUpperCase() + capitalizedWord.slice(colonIndex + 2);
-        }
+        // Capitalize the letter following a hyphen or colon
+        capitalizedWord = capitalizedWord.replace(/(-|:)\s*([a-z])/g, (match, p1, p2) => p1 + ' ' + p2.toUpperCase());
 
         return capitalizedWord;
       }
@@ -33,6 +26,6 @@ function titleCase(string) {
       return word;
     }
   });
-  console.log(capitalizedWords.join(' '));
+
   return capitalizedWords.join(' ');
 }
