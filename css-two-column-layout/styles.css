@@ -1,0 +1,59 @@
+.container {
+  max-width: 800px;
+  min-height: 70vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+
+.col-full {
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.col-50 {
+  flex-basis: calc(100% / 2);
+}
+
+.col-50 > .row {
+  display: flex;
+  padding-top: 30px;
+}
+
+img {
+  float: left;
+  height: 80px;
+}
+
+h1 {
+  font-family: monospace;
+  font-size: 40px;
+  letter-spacing: 0.5px;
+}
+
+h3,
+p {
+  font-size: small;
+  font-family: monospace;
+}
+
+.foot {
+  margin: auto;
+  padding-top: 10px;
+}
+
+.lm {
+  background-color: white;
+  border-color: rgb(255 60 0);
+  color: rgb(255 60 0);
+  height: 35px;
+  width: 150px;
+  font-family: monospace;
+}
