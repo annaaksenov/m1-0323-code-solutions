@@ -53,10 +53,9 @@ a {
 }
 
 .hero {
-  width: 65%;
-  display: flex;
   margin: 0 auto;
-  padding-top: 70px;
+  padding-top: 50px;
+  position: relative;
 }
 
 .col-text {
