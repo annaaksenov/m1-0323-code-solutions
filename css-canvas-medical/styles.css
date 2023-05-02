@@ -53,11 +53,25 @@ a {
 }
 
 .hero {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+
+  /* margin: 0 auto;
   padding-top: 50px;
+  position: relative; */
+}
+
+.hero-img {
+  opacity: 0.9;
+  filter: brightness(85%);
+  width: 100%;
   position: relative;
 }
 
 .col-text {
-  display: flex;
+  position: absolute;
+  padding-left: 4%;
+  padding-right: 45%;
+  color: white;
 }
