@@ -1,25 +1,22 @@
 let clicks = 0;
-let hot = document.querySelector('.hot-button');
-let count = document.querySelector('.click-count');
+const hot = document.querySelector('.hot-button');
+const count = document.querySelector('.click-count');
 
 function handleClick(event) {
   clicks++;
-  count = document.querySelector('.click-count').textContent;
-  hot = document.querySelector('.hot-button');
-  if (hot > 0 && hot < 4) {
-    hot.className = 'cold';
-  } else if (hot < 7 && hot > 4) {
-    hot.className = 'cool';
-  } else if (hot < 10 && hot > 7) {
-    return 'tepid';
-  } else if (hot < 13 && hot > 10) {
-    return 'warm';
-  } else if (hot < 16 && hot > 13) {
-    return 'hot';
-  } else if (hot > 16) {
-    return 'nuclear';
+  count.textContent = 'Clicks: ' + clicks;
+  if (clicks > 0 && clicks < 4) {
+    hot.className = 'hot-button cold';
+  } else if (clicks < 7 && clicks > 4) {
+    hot.className = 'hot-button cool';
+  } else if (clicks < 10 && clicks > 7) {
+    hot.className = 'hot-button tepid';
+  } else if (clicks < 13 && clicks > 10) {
+    hot.className = 'hot-button warm';
+  } else if (clicks < 16 && clicks > 13) {
+    hot.className = 'hot-button hot';
+  } else if (clicks > 16) {
+    hot.className = 'hot-button nuclear';
   }
-  console.log(hot);
 }
 hot.addEventListener('click', handleClick);
-console.log(clicks, count);

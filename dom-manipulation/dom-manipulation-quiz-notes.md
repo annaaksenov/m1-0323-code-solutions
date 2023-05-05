@@ -13,11 +13,11 @@ Sets or returns the text content of the specified node, and all it's descendants
 - How do you update the text within an element using JavaScript?
 `document.getElementById('prop').innerHTML = 'new text!'`
 - Is the `event` parameter of an event listener callback always useful?
-
+Yes, if you're using a callback for an event you want to be listened for, a parameter of the specific event is needed.
 - Would this assignment be simpler or more complicated if we didn't use a variable to keep track of the number of clicks?
-
+Complicated because it is easier to update an already existing variable.
 - Why is storing information about a program in variables better than only storing it in the DOM?
-
+Because it's simpler to call the variable then rewrite the DOM.
 
 ## Notes
 
