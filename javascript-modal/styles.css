@@ -1,0 +1,56 @@
+body {
+  box-sizing: border-box;
+}
+
+.om {
+  width: 135px;
+  height: 35px;
+  background-color: rgb(70 23 240);
+  color: white;
+  font-size: medium;
+  box-shadow: 2px 2px 4px darkgray;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.box {
+  position: fixed;
+  margin: auto;
+  width: 28%;
+  height: 25%;
+  top: 250px;
+  left: 350px;
+  right: 350px;
+  background-color: aqua;
+  border-radius: 5px;
+}
+
+.pop-up {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  text-align: center;
+  column-gap: 10px;
+}
+
+h2 {
+  padding-top: 15px;
+}
+
+.no-btn {
+  padding-top: 20px;
+}
+
+.no {
+  width: 90px;
+  height: 40px;
+  font-size: large;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px darkgray;
+  cursor: pointer;
+}
