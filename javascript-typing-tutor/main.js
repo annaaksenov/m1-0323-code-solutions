@@ -1,17 +1,16 @@
 let currentIndex = 0;
 const allSpans = document.querySelectorAll('span');
-const currentSpan = allSpans[currentIndex];
+allSpans.className = 'bb';
 
 function handleKey(event) {
+  const currentSpan = allSpans[currentIndex];
   if (event.key === currentSpan.textContent) {
-    currentSpan.className = 'correct'; // 0
     currentIndex++;
-    // reset underlined character to the next character
+    currentSpan.className = 'correct';
+    currentSpan.nextElementSibling.className = 'bb';
   } else {
-    currentSpan.className = 'wrong';
+    currentSpan.className = 'wrong bb';
   }
-
-  console.log(event);
 }
+
 document.addEventListener('keydown', handleKey);
-console.log(allSpans);
