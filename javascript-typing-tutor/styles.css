@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  display: flex;
+  white-space: pre;
+  font-family: monospace;
+  align-items: center;
+}
+
+.bb {
+  border-bottom: 3px solid;
+}
+
+.correct {
+  color: rgb(35 255 6);
+}
+
+.wrong {
+  color: red;
+}
