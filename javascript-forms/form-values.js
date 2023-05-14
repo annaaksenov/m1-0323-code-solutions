@@ -2,9 +2,12 @@ const form = document.querySelector('form');
 
 function logSubmit(event) {
   event.preventDefault();
-  const myFormData = new FormData(event.target);
-  const formDataObj = {};
-  myFormData.forEach((value, key) => (formDataObj[key] = value));
-  console.log(formDataObj);
+
+  const myObj = {
+    $email: form.elements.email.value,
+    $msg: form.elements.message.value,
+    $name: form.elements.name.value
+  };
+  console.log(myObj);
 }
 form.addEventListener('submit', logSubmit);
