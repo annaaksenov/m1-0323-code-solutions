@@ -1,7 +1,21 @@
 /* exported titleCase */
 function titleCase(title) {
   const exceptions = ['a', 'an', 'the', 'as', 'at', 'by', 'for', 'in', 'of', 'on', 'per', 'to', 'and'];
-  const words = title.split(' ');
+  const word = title.split(' ');
+  const updatedTitle = [];
+
+  for (const st in word) {
+    updatedTitle[st] = word[st][0].toUpperCase() + word[st].slice(1).toLowerCase();
+    if (word.includes('-')) {
+      updatedTitle[st] = word[st].indexOf('-' + 1).toUpperCase() + word[st].slice(2).toLowerCase();
+      console.log(updatedTitle.join(' '));
+    }
+  }
+  console.log(exceptions);
+  return updatedTitle.join(' ');
+}
+/**
+ *  const words = title.split(' ');
 
   const capitalizedWords = words.map((word, index) => {
     if (index === 0 || !exceptions.includes(word)) {
@@ -19,7 +33,7 @@ function titleCase(title) {
   });
 
   return capitalizedWords.join(' ');
-}
+ */
 
 /**
  * const exceptions = ['a', 'an', 'the', 'as', 'at', 'by', 'for', 'in', 'of', 'on', 'per', 'to', 'and'];
