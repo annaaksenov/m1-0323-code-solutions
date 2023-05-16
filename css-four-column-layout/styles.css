@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+section {
+  background-color: rgb(236 235 235);
+  margin: 0 100px;
+}
+
+h2,
+h3,
+p {
+  display: flex;
+  justify-content: center;
+  font-family: Barlow, sans-serif;
+  padding-top: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.col-one-fourth {
+  width: 250px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.screen {
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.symbol {
+  max-width: 50px;
+  margin: 0 100px;
+}
+
+h3 {
+  font-size: medium;
+  margin-top: 0;
+}
+
+p {
+  font-size: small;
+}
