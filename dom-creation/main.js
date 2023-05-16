@@ -62,33 +62,27 @@ function renderPokemon(pokemon) {
   divCol.className = 'column-third';
   const divCard = document.createElement('div');
   divCard.className = 'pokemon-card';
-  const currentDiv = document.getElementById('.row');
   divCol.appendChild(divCard);
-
   const img = document.createElement('img');
-  img.src = '';
+  img.setAttribute('src', pokemon.imageUrl);
   const divTxt = document.createElement('div');
   divTxt.className = 'pokemon-card-text';
   divCard.appendChild(img);
   divCard.appendChild(divTxt);
-
   const h2 = document.createElement('h2');
-  h2.textContent = '';
+  h2.textContent = pokemon.name;
   const h3 = document.createElement('h3');
-  h3.textContent = '';
+  h3.textContent = pokemon.number;
   const p = document.createElement('p');
-  p.textContent = '';
+  p.textContent = pokemon.description;
   divTxt.appendChild(h2);
   divTxt.appendChild(h3);
   divTxt.appendChild(p);
-
-  console.log(divCol);
-  console.log(currentDiv);
+  return divCol;
 }
 
-const row = document.querySelector('row');
+const row = document.querySelector('.row');
 for (let i = 0; i < pokedex.length; i++) {
   const result = renderPokemon(pokedex[i]);
   row.append(result);
-  console.log(result);
 }
