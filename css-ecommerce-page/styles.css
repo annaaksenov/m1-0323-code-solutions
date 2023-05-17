@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-  margin: 0 110px;
+  margin: 0 10%;
 }
 
 h1 {
@@ -22,11 +22,11 @@ p {
 
 .row {
   display: flex;
-  justify-content: center;
+  max-width: 70rem;
+  flex-basis: 25%;
 }
 
-.col-one-fourth {
-  display: block;
+.col-one-fifth {
   margin: 0 10px 10px;
 }
 
