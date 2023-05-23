@@ -5,13 +5,13 @@
 After completing this exercise, you should be able to discuss or answer the following questions:
 
 - How do you store data in `localStorage`?
-
+Using `localStorage.setItem()`.
 - How do you retrieve data from `localStorage`?
-
+`localStorage.getItem()`.
 - What data type can `localStorage` save in the browser?
-
+Objects or an array.
 - When does the `'beforeunload'` event fire on the `window` object?
-
+When the document is about to unload.
 ## Notes
 
 All student notes should be written here.
