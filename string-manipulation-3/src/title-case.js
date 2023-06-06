@@ -1,29 +1,48 @@
 /* exported titleCase */
+
+/** function capitlizeHyphen (hyphenWord) { //"in-depth"
+  const separatedWords = hyphenWord.split('-'); //['in', 'depth']
+  separatedWords[1] = separatedWords[1][0].toUpperCase() + separatedWords[1].slice(1); //['in', 'Depth']
+  return separatedWords.join('-'); //'in-Depth'
+} */
+
 function titleCase(title) {
   const exceptions = ['a', 'an', 'the', 'as', 'at', 'by', 'for', 'in', 'of', 'on', 'per', 'to', 'and'];
   const updatedTitle = [];
-  const str = title.toLowerCase().split(' ');
+  let str;
+  let specialCharPosition;
+  let specialChar;
+  if (title.includes(':')) {
+    specialCharPosition = title.indexOf(':');
+    specialChar = ':';
+    str = title.toLowerCase().split(':');
+    console.log('colon', str);
+  } else if (title.includes('-')) {
+    str = title.toLowerCase().split('-');
+  }
+  str = title.toLowerCase().split(' ');
+  console.log('wordSplit');
+  console.log(str);
+
   for (let i = 0; i < str.length; i++) {
     updatedTitle[i] = str[i][0].toUpperCase() + str[i].slice(1).toLowerCase();
 
     if (exceptions.includes(str[i]) && i !== 0) {
       updatedTitle[i] = str[i].toLowerCase();
-    } else if (str[i] === 'in-depth') {
-      updatedTitle[i] = 'In-Depth';
-    } else if (str[i] === 'self-taught') {
-      updatedTitle[i] = 'Self-Taught';
     } else if (str[i] === 'api') {
       updatedTitle[i] = 'API';
-    } else if (str[i] === 'javascript') {
+    } else if (str[i].includes('javascript')) {
       updatedTitle[i] = 'JavaScript';
-    } else if (str[i].includes('javascript:')) {
-      updatedTitle[i] = 'JavaScript:';
-    } else if (exceptions.includes(str[i]) && i === 0) {
-      updatedTitle[i] = str[i].toUpperCase();
     }
   }
-  console.log(updatedTitle.join(' '));
-  return updatedTitle.join(' ');
+  let joinedTitle = updatedTitle.join(' ');
+  if (specialChar) {
+    joinedTitle =
+      joinedTitle.substring(0, specialCharPosition) +
+      joinedTitle.substring(specialCharPosition);
+  }
+  console.log(joinedTitle);
+  return joinedTitle;
 }
 
 /** const exceptions = ['a', 'an', 'the', 'as', 'at', 'by', 'for', 'in', 'of', 'on', 'per', 'to', 'and'];
@@ -55,6 +74,28 @@ function titleCase(title) {
   console.log(updatedTitle.join(' '));
   return updatedTitle.join(' '); */
 /**
+ * const updatedTitle = [];
+  const str = title.toLowerCase().split(' ');
+  for (let i = 0; i < str.length; i++) {
+    updatedTitle[i] = str[i][0].toUpperCase() + str[i].slice(1).toLowerCase();
+
+    if (exceptions.includes(str[i]) && i !== 0) {
+      updatedTitle[i] = str[i].toLowerCase();
+    } else if (str[i] === 'in-depth') {
+      updatedTitle[i] = 'In-Depth';
+    } else if (str[i] === 'self-taught') {
+      updatedTitle[i] = 'Self-Taught';
+    } else if (str[i] === 'api') {
+      updatedTitle[i] = 'API';
+    } else if (str[i] === 'javascript') {
+      updatedTitle[i] = 'JavaScript';
+    } else if (str[i].includes('javascript:')) {
+      updatedTitle[i] = 'JavaScript:';
+    }
+  }
+  console.log(updatedTitle.join(' '));
+  return updatedTitle.join(' ');
+
  *const exceptions = ['a', 'an', 'the', 'as', 'at', 'by', 'for', 'in', 'of', 'on', 'per', 'to', 'and'];
   const updatedTitle = [];
   const str = title.toLowerCase().split(' ');
