@@ -13,8 +13,6 @@ function titleCase(title) {
     str = title.toLowerCase().split('-');
   }
   str = title.toLowerCase().split(' ');
-  console.log('wordSplit');
-  console.log(str);
 
   for (let i = 0; i < str.length; i++) {
     updatedTitle[i] = str[i][0].toUpperCase() + str[i].slice(1).toLowerCase();
@@ -22,16 +20,19 @@ function titleCase(title) {
     if (exceptions.includes(str[i]) && i !== 0) {
       updatedTitle[i] = str[i].toLowerCase();
     } else if (str[i] === 'api') {
-      updatedTitle[i] = 'API';
+      updatedTitle[i] = str[i].replace('api', 'API');
     } else if (str[i].includes('javascript')) {
-      updatedTitle[i] = 'JavaScript';
+      updatedTitle[i] = str[i].replace('javascript', 'JavaScript');
     }
   }
   let joinedTitle = updatedTitle.join(' ');
+
   if (specialChar) {
+    const afterColon = joinedTitle[specialCharPosition + 2].toUpperCase();
+    console.log(afterColon);
     joinedTitle =
-      joinedTitle.substring(0, specialCharPosition) +
-      joinedTitle.substring(specialCharPosition);
+      joinedTitle.substring(0, specialCharPosition + 1) + ' ' + afterColon;
+
   }
   console.log(joinedTitle);
   return joinedTitle;
