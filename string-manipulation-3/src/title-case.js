@@ -8,7 +8,6 @@ function titleCase(title) {
     specialCharPosition = title.indexOf(':');
     specialChar = ':';
     str = title.toLowerCase().split(':');
-    console.log('colon', str);
   } else if (title.includes('-')) {
     str = title.toLowerCase().split('-');
   }
@@ -28,13 +27,12 @@ function titleCase(title) {
   let joinedTitle = updatedTitle.join(' ');
 
   if (specialChar) {
-    const afterColon = joinedTitle[specialCharPosition + 2].toUpperCase();
-    console.log(afterColon);
     joinedTitle =
-      joinedTitle.substring(0, specialCharPosition + 1) + ' ' + afterColon;
-
+    joinedTitle.substring(0, specialCharPosition + 2) +
+    joinedTitle[specialCharPosition + 2].toUpperCase() +
+    joinedTitle.substring(specialCharPosition + 3);
   }
-  console.log(joinedTitle);
+
   return joinedTitle;
 }
 console.log(titleCase);
