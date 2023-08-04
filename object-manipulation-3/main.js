@@ -20,30 +20,34 @@ function createDeck() {
 }
 
 function shuffleDeck(deck) {
-  let score;
   const shuffChunk = _.chunk(_.shuffle(deck), 2);
-  for (let i = 0; i < players.length; i++) {
-    players[i].hand = [...shuffChunk.splice(0, 1)];
-    if (players[i].hand === ranks[0]) {
-      score += 11;
-    } else if (players[i].hand === ranks[10] || ranks[11] || ranks[12]) {
-      score += 10;
-    }
-  }
-
-  return score;
+  return shuffChunk;
 }
 shuffleDeck(createDeck());
 console.log(shuffleDeck(createDeck()));
 
-/*
- function deal(eachOne) {
+function deal(deck, players) {
   for (let playerCount = 0; playerCount < 4; playerCount++) {
-    players[playerCount].hand = shuffleDeck.splice(0, 3);
+    players[playerCount].hand = deck.splice(0, 2);
   }
   return players;
 }
-console.log(deal());
+deal(shuffleDeck(createDeck()), players);
+console.log(deal(shuffleDeck(createDeck()), players));
+
+function callWinner(players) {
+  let score;
+  for (let i = 0; i < players.length; i++) {
+    // const split = players[i].hand.split(' ');
+    if (players[i].hand.includes('A')) {
+      score += 11;
+    }
+  }
+  return score;
+}
+callWinner(players);
+console.log(callWinner(players));
+/*
  for (var i = 0; i < ranks.length; i++) {
     for (var j = 0; j < suits.length; j++) {
       var card = { rank: ranks[i], suit: suits[j] };
