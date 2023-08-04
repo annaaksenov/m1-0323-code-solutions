@@ -3,13 +3,14 @@ const players = [
   { name: 'Desi', hand: [] },
   { name: 'Kyle', hand: [] },
   { name: 'Pete', hand: [] },
-  { name: 'Sofie', hand: [] }
+  { name: 'Sofi', hand: [] }
 ];
 const ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
 const suits = ['C', 'D', 'H', 'S'];
 const deck = [];
+// const cardValue = { 'A': 11, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '10': 10, 'J': 10, 'Q': 10, 'K': 10 };
+// const cardValue = { A: 11, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10, J: 10, Q: 10, K: 10 };
 function createDeck() {
-
   for (let suitCounter = 0; suitCounter < 4; suitCounter++) {
     for (let rankCounter = 0; rankCounter < 13; rankCounter++) {
       deck.push(ranks[rankCounter] + suits[suitCounter]);
@@ -19,14 +20,21 @@ function createDeck() {
 }
 
 function shuffleDeck(deck) {
+  let score;
   const shuffChunk = _.chunk(_.shuffle(deck), 2);
   for (let i = 0; i < players.length; i++) {
     players[i].hand = [...shuffChunk.splice(0, 1)];
+    if (players[i].hand === ranks[0]) {
+      score += 11;
+    } else if (players[i].hand === ranks[10] || ranks[11] || ranks[12]) {
+      score += 10;
+    }
   }
-  return players;
+
+  return score;
 }
+shuffleDeck(createDeck());
 console.log(shuffleDeck(createDeck()));
-console.log(players);
 
 /*
  function deal(eachOne) {
