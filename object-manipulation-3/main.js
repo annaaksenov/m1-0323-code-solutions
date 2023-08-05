@@ -23,54 +23,32 @@ function shuffleDeck(deck) {
   return shuffChunk;
 }
 shuffleDeck(createDeck());
-console.log(shuffleDeck(createDeck()));
 
 function deal(deck, players) {
   for (let playerCount = 0; playerCount < 4; playerCount++) {
-    players[playerCount].hand = deck.splice(0, 2);
+    players[playerCount].hand = deck.splice(0, 1);
   }
   return players;
 }
 deal(shuffleDeck(createDeck()), players);
-console.log(deal(shuffleDeck(createDeck()), players));
 
 function callWinner(players) {
-  /* const score = 0;
-  const cardValue = ranks.map(({ rank, value }) => ({
-    A: 11,
-    2: 2,
-    3: 3,
-    4: 4,
-    5: 5,
-    6: 6,
-    7: 7,
-    8: 8,
-    9: 9,
-    10: 10,
-    J: 10,
-    Q: 10,
-    K: 10
-  }));
-   for (let i = 0; i < players.length; i++) {
-
+  const arr = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const obj = { A: 11, J: 10, Q: 10, K: 10 };
+  for (let i = 0; i < players.length; i++) {
+    let score = 0;
+    for (let j = 0; j < players[i].hand.length; j++) {
+      for (let k = 0; k < players[i].hand[j].length; k++) {
+        if (arr.includes(parseInt(players[i].hand[j][k]))) {
+          score += parseInt([players[i].hand[j][k]]);
+        } else {
+          score += obj[players[i].hand[j][k][0]];
+        }
+      }
+    }
+    players[i].score = score;
   }
-  return players; */
+  const winner = players.sort((a, b) => b.score - a.score)[0];
+  console.log('Winner!:', winner);
 }
 callWinner(players);
-console.log(callWinner(players));
-
-/* const cardValue = ranks.map(n => {
-  let value = 0;
-  if (n === 'A') {
-    value = 11;
-  } else if (n === 'J') {
-    value = 10;
-  } else if (n === 'Q') {
-    value = 10;
-  } else if (n === 'K') {
-    value = 10;
-  } else {
-    value = n;
-  }
-  return value;
-}); */
